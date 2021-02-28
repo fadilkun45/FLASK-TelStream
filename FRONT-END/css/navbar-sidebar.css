@@ -1,0 +1,161 @@
+* {
+    margin: 0 ;
+    padding: 0 ;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F4F3F5 ;
+}
+
+.container-utama {
+    display: flex ;
+    flex-direction: row ;
+    width: 100% ;
+}
+
+.main-container {
+    order: 2;
+    width: 100% ;
+}
+
+nav {
+    display: flex ;
+    flex-direction: row ;
+    padding-top: 12px ;
+    justify-content: space-between ;
+    right: 0 ;
+}
+
+.toggle {
+    position: relative ;
+    width: 30px ;
+    display: block ;
+    margin-left: 30px ;
+}
+
+.toggle input {
+    display: block ;
+    position: absolute ;
+    width: 100% ;
+    height : 100%  ;
+    opacity: 0 ;
+}
+
+.toggle span {
+    width: 30px ;
+    height: 5px ;
+    margin: 3px 0 ;
+    display: block ;
+    background-color : #495154 ;
+}
+
+.toggle input:checked ~ span {
+    background-color: blue ;
+}
+
+ .search-bar input {
+  width: 200px ;
+  border: none ;
+  margin-right : 60px ;
+  background-color: #E9E9EB ;
+  border-radius: 10px ;
+  text-align: center ;
+  padding: 3px ;
+
+}
+ .search-bar input:active {
+    border: none ;
+}
+
+.container-utama .sidebar {
+    order: 1;
+    display: flex ;
+    flex-direction: column ;
+    transition: 1s ease ;
+    height: 1500px ;
+    width: 280px ;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+    background-color : linear-gradient(180deg, #FBFBFB 0%, #F2F3F8 100%);
+}
+
+.sidebar .icon {
+    width: 30px ;
+    height: 20px ;
+}
+
+.sidebar .warna-head {
+    background-color: #FD9292 ;
+    color: #F4F3F5;
+    padding: 30px ;
+}
+
+.sidebar a{
+    font-size: 13px ;
+    color: #495154 ;
+    text-decoration: none ;
+}
+
+.sidebar a:hover {
+    color: black ;
+    text-decoration: none ;
+}
+
+.sidebar h4 {
+    font-size: 18px ;
+    color:#495154;
+}
+
+.sidebar-hilang {
+    margin-left : -280px  ;
+}
+
+.container {
+    margin: 30px auto ;
+    width: 1000px ;
+    /* border: 1px solid black ; */
+}
+
+@media only screen and (max-width : 800px ){
+
+    * {
+        overflow-x: hidden ;
+    }
+    
+    .nav .search-bar input {
+        width: 150px ;
+        margin-left: -70px ;
+        margin-right : 0px ;
+        background-color: #E9E9EB ;
+        border-radius: 10px ;
+        text-align: center ;
+        padding: 3px ;
+        transition : 1s ease ;
+      
+    }
+
+    .container {
+        margin: 30px 0 ;
+        width: 350px ;
+        margin-left: 25px ;
+        overflow-x: hidden ;
+    }
+
+     .container-utama .sidebar {
+        margin-left: -240px ;
+        /* height : 700px  ; */
+    }
+
+    .container-utama .sidebar {
+        width: 230px ;
+    }
+
+  .container-utama-pengecil {
+        width: 40% ;
+    }
+
+    .container-utama .sidebar-hilang {
+        margin-left : 0px ;
+    }
+
+}

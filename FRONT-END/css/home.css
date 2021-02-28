@@ -1,0 +1,46 @@
+
+.image-hero img {
+    width: 1000px ;
+    height : 350px ;
+}
+
+.trending , .Tomcat {
+    width: 1000px ;
+    margin-top : 50px ;
+}
+
+.trending-card img {
+    height: 300px ;
+}
+
+.text-title {
+    color: #292929;
+    text-decoration: none ;
+}
+
+.text-subtitle {
+    color: #636363;
+    text-decoration: none ;
+}
+
+
+.no-hover:hover {
+    text-decoration : none ;
+}
+
+@media only screen and (max-width : 600px ){
+
+    .trending , .Tomcat {
+        width: 280px ;
+    }
+
+    .hapus-overflow {
+        overflow : hidden ;
+    }
+
+    .image-hero img {
+        margin-left: -10px ;
+        width: 310px ;
+        height : 150px ;
+    }
+}

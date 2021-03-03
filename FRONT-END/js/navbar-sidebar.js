@@ -28,6 +28,7 @@ SearchBarvalue.addEventListener('blur', function () {
 
 })
 
+// live search
 SearchBarvalue.addEventListener('keyup',function(event){
     if(event.keyCode == 13) {
         $(".container").load("section/search.html");
@@ -41,34 +42,38 @@ SearchBarvalue.addEventListener('keyup',function(event){
                 const thumbnail = data[i][2];
                 const container = document.querySelector('.result');
                 container.innerHTML += `<div class="col-md text-center mb-3">
-                <div class="card">
-                  <a href="#" data-url="${url}" class="no-hover video-result">
-                    <img class="card-img-top" src="${thumbnail}">
+                <div class="card" >
+                    <a href="#" class="no-hover video-result" data-url ="${url}" >
+                    <img class="card-img-top" src="`+ thumbnail +`">
                     <div class="card-body">
-                      <h5 class="card-title hapus-overflow text-title">${title}</h5>
+                        <h5 class="card-title hapus-overflow text-title">` + title + `</h5>
                     </div>
-                  </a>
+                    </a>
                 </div>
+                </div>`
+        }
+        // pemanggil video player
+        const film = document.querySelectorAll('.video-result');
+        film.forEach(btn => {
+        btn.addEventListener('click', function(){
+            console.log("tes");
+            const videoLink = "https://www.youtube.com/embed/" + this.dataset.url ;
+            console.log(videoLink);
+            CallPlayer(videoLink)
+        })
+        })
+        function CallPlayer(videoLink) {
+            const tesfile = document.querySelector(".result");
+            tesfile.innerHTML = '';
+            tesfile.innerHTML += `<div class = "col"><div class= "col"><iframe width="853" height="480" src="${videoLink}" frameborder="0" allow="accelerometer autoplay  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="col"><button class="btn btn-primary" onclick = "loadhome()">back</button></div>
             </div>`
 
-            $('.video-result').on('click',function (){
-                $(".container").load("section/stream.html");
-                const source = document.createElement('source');
-                const linkembed = "https://www.youtube.com/embed/"
-                const videoLink = linkembed + this.dataset.url ;
-                console.log(videoLink)
-                const layar = document.querySelector('#stream-player');
-                source.setAttribute('src',videoLink);
-                layar.appendChild(source);
-            })
         }
-
-           
-            
-        })
+     })
+       
     };
 })
-
 
 // section caller
 

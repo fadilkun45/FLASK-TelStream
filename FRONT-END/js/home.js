@@ -20,7 +20,7 @@ function TomcatCaller (){
 
       container.innerHTML += `<div class="col-md text-center mb-3">
             <div class="card">
-              <a href="${url}" class="no-hover">
+              <a href="#" class="no-hover video-result " data-url = "${url}">
                 <img class="card-img-top" src="${thumbnail}">
                 <div class="card-body">
                   <h5 class="card-title hapus-overflow text-title">${title}</h5>
@@ -30,6 +30,16 @@ function TomcatCaller (){
             </div>
         </div>`
     }
+
+    // Trigger video player
+    const film = document.querySelectorAll('.video-result');
+    film.forEach(btn => {
+       btn.addEventListener('click', function(){
+           const videoLink = "https://www.youtube.com/embed/" + this.dataset.url ;
+           console.log(videoLink);
+           CallvideoPlayer(videoLink);
+       })
+    })
   })
 }
 
@@ -48,7 +58,7 @@ function SenmedCaller (){
 
       container.innerHTML += `<div class="col-md text-center mb-3">
             <div class="card">
-              <a href="${url}" class="no-hover">
+              <a href="#"  class="no-hover video-result" data-url = "${url}">
                 <img class="card-img-top" src="${thumbnail}">
                 <div class="card-body">
                   <h5 class="card-title hapus-overflow text-title">${title}</h5>
@@ -58,7 +68,24 @@ function SenmedCaller (){
             </div>
         </div>`
     }
+  // Trigger video player
+  const film = document.querySelectorAll('.video-result');
+  film.forEach(btn => {
+      btn.addEventListener('click', function(){
+          const videoLink = "https://www.youtube.com/embed/" + this.dataset.url ;
+          console.log(videoLink);
+          CallvideoPlayer(videoLink);
+      })
   })
+})
 }
 
+// video player
+function CallvideoPlayer(videoLink) {
+  const containerUtama = document.querySelector(".container");
+  containerUtama.innerHTML = '';
+  containerUtama.innerHTML += `<div class = "col"><div class= "col"><iframe width="853" height="480" src="${videoLink}" frameborder="0" allow="accelerometer autoplay  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  <div class="col"><button class="btn btn-primary btn-mobile" onclick = "loadhome()">back</button></div>
+  </div>`
+}
 

@@ -21,14 +21,14 @@
                 <div class="row warna-head">
                     <div class="col"><img src="img/tomcatlogo 1.svg">  TELSTREAM</div>
                 </div>
-                <div class="col-lg">
+                <div class="col-lg hapus-overflow">
                     <div class="col mb-3 mt-3"><h4>Menu</h4></div>
                     <div class="col mb-3 mt-3 rmvcheck"><a href="#" onclick="loadhome()"><img class="icon" src="img/home.svg"> Home</a></div>
                     <div class="col mb-3 mt-3 rmvcheck"><a href="#" onclick="loadTrending()"><img class="icon" src="img/trending.svg "> Trending now</a></div>
                     <div class="col mb-3 mt-3 rmvcheck "><a href="#" onclick="loadLive()"><img class="icon" src="img/live.svg"> live Now</a></div>
                 </div>
-                <div class="col">
-                    <div class="col mb-3 mt-3 " ><h4>Dokumentasi</h4></div>
+                <div class="col ">
+                    <div class="col mb-3 mt-3" ><h4>Dokumentasi</h4></div>
                     <div class="col mb-3 mt-3 rmvcheck"><a href="#" onclick="loadSenmed()">Seni Media</a></div>
                     <div class="col mb-3 mt-3 rmvcheck"><a href="#" onclick="loadTomcat()">Tomcat</a></div>
                 </div>
@@ -43,27 +43,14 @@
                     <span></span>
                 </div>
                 <div class="search-bar">
-                    <input type="text" onkeyup="showResult(this.value)" placeholder="cari apa gan">
+                    <input type="text" id="bar" placeholder="cari apa gan">
                     <div id="livesearch"></div>
                 </div>
             </nav>
-                <div class="container">
-                </div>
+            <div class="container">
+            </div>
         </div>
     </div>
-
-    <script>
-        function showResult(str) {
-          fetch('https://api.mikasa-server.online/api/v1/youtube/?title='+str)
-            .then(response => response.json())
-            .then((data) => {
-                console.log(data['title'])
-                const title = data['title'];
-                document.getElementById("livesearch").innerHTML=title;
-                document.getElementById("livesearch").style.border="1px solid #A5ACB2";
-            })
-        }
-    </script>
     <script src="js/navbar-sidebar.js"></script>
     <script src="js/home.js"></script>
     <!-- boostrap 4 cdn -->

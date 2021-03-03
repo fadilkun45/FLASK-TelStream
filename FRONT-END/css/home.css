@@ -28,6 +28,15 @@
     text-decoration : none ;
 }
 
+@media only screen and (max-width : 800px ){
+
+    .image-hero img {
+        width: 500px ;
+        height : 230px ;
+        margin-left: 50px ;
+    }
+}
+
 @media only screen and (max-width : 600px ){
 
     .trending , .Tomcat {

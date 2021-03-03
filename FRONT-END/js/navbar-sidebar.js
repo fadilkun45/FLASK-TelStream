@@ -66,7 +66,7 @@ SearchBarvalue.addEventListener('keyup',function(event){
             const tesfile = document.querySelector(".result");
             tesfile.innerHTML = '';
             tesfile.innerHTML += `<div class = "col"><div class= "col"><iframe width="853" height="480" src="${videoLink}" frameborder="0" allow="accelerometer autoplay  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="col"><button class="btn btn-primary" onclick = "loadhome()">back</button></div>
+            <div class="col"><button class="btn btn-primary btn-mobile" onclick = "loadhome()">back</button></div>
             </div>`
 
         }

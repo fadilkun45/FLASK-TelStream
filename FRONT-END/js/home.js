@@ -2,8 +2,8 @@ window.onload = starthome()
 
 function starthome (){
   $(".container").load("section/home.html");
-   setTimeout( TomcatCaller(),5000)
-   setTimeout( SenmedCaller(),5000)
+   setTimeout( TomcatCaller(),10000)
+   setTimeout( SenmedCaller(),10000)
 }
 
 

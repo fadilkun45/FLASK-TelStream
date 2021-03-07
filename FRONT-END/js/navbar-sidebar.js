@@ -5,6 +5,9 @@ const container = document.querySelector('.container');
 const SearchBar = document.querySelector('.search-bar');
 const searchbarResult = document.querySelector('#livesearch');
 const SearchBarvalue = document.querySelector('#bar');
+const dropdown = document.querySelector('.dropdown');
+const toggledrop = document.querySelector('.drop-toggle');
+const droparrow = document.querySelector('.drop-toggle img');
 
 // livesearch 
 SearchBarvalue.addEventListener('keyup', function showResult() {
@@ -12,8 +15,8 @@ SearchBarvalue.addEventListener('keyup', function showResult() {
       .then(response => response.json())
       .then((data) => {
           console.log(data['title'])
-          const title = data['title'];
-
+          const title = data[0][0];
+          
         if(title === undefined ){
             searchbarResult.innerHTML=`<p>404 not found</p>`;
         }else{
@@ -51,7 +54,7 @@ SearchBarvalue.addEventListener('keyup',function(event){
                     </a>
                 </div>
                 </div>`
-        }
+    }
         // pemanggil video player
         const film = document.querySelectorAll('.video-result');
         film.forEach(btn => {
@@ -61,6 +64,8 @@ SearchBarvalue.addEventListener('keyup',function(event){
             console.log(videoLink);
             CallPlayer(videoLink)
         })
+
+
         })
         function CallPlayer(videoLink) {
             const tesfile = document.querySelector(".result");
@@ -113,6 +118,14 @@ function checkedRemove (){
     SearchBar.style.display = "block" ;
     MainContainer.classList.remove('container-utama-pengecil');
 }
+
+// Dropdown 
+
+    toggledrop.addEventListener('click', function(){
+        dropdown.classList.toggle("dropdown-hilang");
+        droparrow.classList.toggle("drop-animate");
+    })
+
 
 // sidebar
 toggle.addEventListener('change', function(event){

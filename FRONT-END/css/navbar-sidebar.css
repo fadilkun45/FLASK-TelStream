@@ -125,6 +125,31 @@ nav {
     margin-left : -280px  ;
 }
 
+.dropdown {
+    transition: 0.3s ease ;
+    margin-top: 0 ;
+}
+
+.drop-toggle {
+    display: flex ;
+    flex-direction: row ;
+}
+
+.drop-toggle img {
+    width: 15px ;
+    height: 15px ;
+    transition: all 0.2s ;
+}
+
+.drop-animate {
+    transform: rotate(180deg);
+}
+
+.dropdown-hilang {
+    margin-top : -100px ;
+    display: none ;
+}
+
 .container {
     margin: 30px auto ;
     width: 1000px ;

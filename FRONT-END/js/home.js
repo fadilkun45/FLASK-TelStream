@@ -2,9 +2,10 @@ window.onload = starthome()
 
 function starthome (){
   $(".container").load("section/home.html");
-    TomcatCaller()
-    SenmedCaller()
+   setTimeout( TomcatCaller()
+   ,SenmedCaller(),5000)
 }
+
 
 function TomcatCaller (){
   fetch('https://api.mikasa-server.online/api/v1/youtube/?channel=tstream')
@@ -67,7 +68,8 @@ function SenmedCaller (){
               </a>
             </div>
         </div>`
-    }
+  }
+
   // Trigger video player
   const film = document.querySelectorAll('.video-result');
   film.forEach(btn => {
@@ -76,9 +78,10 @@ function SenmedCaller (){
           console.log(videoLink);
           CallvideoPlayer(videoLink);
       })
+    })
   })
-})
 }
+
 
 // video player
 function CallvideoPlayer(videoLink) {

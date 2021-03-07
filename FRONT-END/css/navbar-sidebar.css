@@ -153,11 +153,12 @@ nav {
 .container {
     margin: 30px auto ;
     width: 1000px ;
-    /* border: 1px solid black ; */
+    border: 1px solid black ;
 }
 
 @media only screen and (max-width : 800px ){
 }
+
 
 @media only screen and (max-width : 600px ){
 
@@ -177,16 +178,19 @@ nav {
       
     }
 
-    .container {
-        margin: 30px 0 ;
+    .container-utama .main-container {
         width: 350px ;
-        margin-left: 30px ;
+        margin: 0 auto ;
+    }
+
+    .container {
+        width : 330px ;
         overflow-x: hidden ;
+        margin: 30px auto  ;
     }
 
     .container-utama .sidebar {
         margin-left: -240px ;
-        /* height : 700px  ; */
     }
 
     .container-utama .sidebar {

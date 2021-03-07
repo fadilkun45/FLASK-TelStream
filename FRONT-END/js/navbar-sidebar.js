@@ -120,12 +120,10 @@ function checkedRemove (){
 }
 
 // Dropdown 
-
     toggledrop.addEventListener('click', function(){
         dropdown.classList.toggle("dropdown-hilang");
         droparrow.classList.toggle("drop-animate");
     })
-
 
 // sidebar
 toggle.addEventListener('change', function(event){
@@ -147,6 +145,7 @@ if (document.documentElement.clientWidth < 800 ){
             MainContainer.classList.add('container-utama-pengecil');
         }else{
             container.style.display = "flex" ;
+            container.style.flexDirection = "column" ;
             SearchBar.style.display = "block" ;
             MainContainer.classList.remove('container-utama-pengecil');
         }

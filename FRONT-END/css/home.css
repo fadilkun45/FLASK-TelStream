@@ -39,8 +39,19 @@
 
 @media only screen and (max-width : 600px ){
 
+    .card img {
+        margin: 20px auto ;
+        width: 200px ;
+        height: 180px ;
+    }
+
+    .card {
+        width: 325px ;
+    }
+
     .trending , .Tomcat {
-        width: 280px ;
+        width: 325px ;
+        /* margin: 30px auto; */
     }
 
     .hapus-overflow {
@@ -48,8 +59,9 @@
     }
 
     .image-hero img {
-        margin-left: -10px ;
-        width: 310px ;
+        /* margin-left: -10px ; */
+        margin: 0 ;
+        width: 325px ;
         height : 150px ;
         margin-bottom : -40px ;
     }

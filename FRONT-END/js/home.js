@@ -22,7 +22,7 @@ function TomcatCaller (){
       container.innerHTML += `<div class="col-md text-center mb-3">
             <div class="card">
               <a href="#" class="no-hover video-result " data-url = "${url}">
-                <img class="card-img-top" src="${thumbnail}">
+                <img class="card-img " src="${thumbnail}">
                 <div class="card-body">
                   <h5 class="card-title hapus-overflow text-title">${title}</h5>
                   <h6 class="card-subtitle mb-2 text-muted hapus-overflow text-subtitle">${publish}</h6>

@@ -54,6 +54,11 @@ nav {
     background-color: blue ;
 }
 
+.search-bar {
+    display: flex ;
+    flex-direction: column ;
+}
+
  .search-bar input {
   width: 200px ;
   border: none ;
@@ -66,6 +71,14 @@ nav {
 }
  .search-bar input:active {
     border: none ;
+}
+
+.search-bar #livesearch {
+    width: 200px ;
+    display: block ;
+    font-size: 18px ;
+    text-align: center ;
+    /* border: 1px solid black ; */
 }
 
 .container-utama .sidebar {
@@ -90,6 +103,7 @@ nav {
     padding: 30px ;
 }
 
+
 .sidebar a{
     font-size: 13px ;
     color: #495154 ;
@@ -104,10 +118,36 @@ nav {
 .sidebar h4 {
     font-size: 18px ;
     color:#495154;
+    overflow: hidden ;
 }
 
 .sidebar-hilang {
     margin-left : -280px  ;
+}
+
+.dropdown {
+    transition: 0.3s ease ;
+    margin-top: 0 ;
+}
+
+.drop-toggle {
+    display: flex ;
+    flex-direction: row ;
+}
+
+.drop-toggle img {
+    width: 15px ;
+    height: 15px ;
+    transition: all 0.2s ;
+}
+
+.drop-animate {
+    transform: rotate(180deg);
+}
+
+.dropdown-hilang {
+    margin-top : -100px ;
+    display: none ;
 }
 
 .container {
@@ -117,8 +157,12 @@ nav {
 }
 
 @media only screen and (max-width : 800px ){
+}
 
-    * {
+
+@media only screen and (max-width : 600px ){
+
+    .container-utama {
         overflow-x: hidden ;
     }
     
@@ -134,23 +178,27 @@ nav {
       
     }
 
-    .container {
-        margin: 30px 0 ;
+    .container-utama .main-container {
         width: 350px ;
-        margin-left: 25px ;
-        overflow-x: hidden ;
+        margin: 0 auto ;
     }
 
-     .container-utama .sidebar {
+    .container {
+        width : 340px ;
+        overflow-x: hidden ;
+        margin: 30px auto  ;
+        flex-direction: column ;
+    }
+
+    .container-utama .sidebar {
         margin-left: -240px ;
-        /* height : 700px  ; */
     }
 
     .container-utama .sidebar {
         width: 230px ;
     }
 
-  .container-utama-pengecil {
+    .container-utama-pengecil {
         width: 40% ;
     }
 
